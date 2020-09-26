@@ -13,16 +13,15 @@ const{plan}=request.body;
 const insertTask=await db('task').insert({
   plan
 });
-console.log(insertTask)
-return response.json(insertTask);
+//Ordem decresente
+const tasks= await db('task').select('*').orderBy('id','desc');
+return response.json(tasks);
 
 }
 
-
-
 export async function destroy(request:Request,response:Response){
   const {id}=request.params
-console.log(id)
-  await db('task').where('id',id).delete();
+
+  await db('task').where({id}).del();
   return response.status(204).send('Apagado')
 }
