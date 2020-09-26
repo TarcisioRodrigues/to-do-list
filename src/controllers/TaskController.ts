@@ -14,7 +14,7 @@ const insertTask=await db('task').insert({
   plan
 });
 //Ordem decresente
-const tasks= await db('task').select('*').orderBy('id','desc');
+const tasks= await db('task').select('*').first().orderBy('id','desc');
 return response.json(tasks);
 
 }
