@@ -1,5 +1,5 @@
 # to-do-list-backend# 
-> O produto faz a criação,listagem e excluisão de  tarefas
+> O produto faz a criação,listagem e exclusão de  tarefas
 
 
 ## Tecnologias ultilizadas
@@ -36,12 +36,7 @@ yarn install
 Serve como agenda para você organizar suas ideias,tarefas diárias,planejamento de um projeto.
 
 
-## Configuração para Desenvolvimento
 
-```sh
-make install
-npm test
-```
 
 
 ## Meta
